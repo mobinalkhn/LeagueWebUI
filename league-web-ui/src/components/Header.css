@@ -1,0 +1,113 @@
+.header {
+  background-color: #025FEB;
+  padding: 0;
+  height: 60px;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-image {
+  height: 24px;
+  width: 24px;
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navigation {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; /* Exact spec: 16px for menu */
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Responsive styles - Exact dimensions per specification */
+@media (max-width: 1000px) {
+  .header-container {
+    padding: 0 40px; /* 40px padding maintained */
+  }
+}
+
+@media (max-width: 750px) {
+  .header-container {
+    padding: 0 40px;
+  }
+  
+  .navigation {
+    gap: 25px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 0 40px;
+  }
+  
+  .navigation {
+    gap: 25px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+  
+  .logo-image {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .logo-text {
+    font-size: 14px;
+  }
+}

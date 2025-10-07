@@ -1,0 +1,315 @@
+.schedule-page {
+  min-height: calc(100vh - 140px);
+  background-color: #FFFFFF;
+  padding: 60px 0 40px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page-title {
+  color: #182C62;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: #4B5C68;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 40px;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.matches-table-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E4EDF2;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.matches-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.matches-table th {
+  background-color: #E4EDF2;
+  color: #4B5C68;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #E4EDF2;
+}
+
+.matches-table td {
+  color: #4B5C68;
+  font-size: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #E4EDF2;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.matches-table .even-row {
+  background-color: #F6F7F7;
+}
+
+.date-cell {
+  text-align: center;
+  min-width: 80px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  font-size: 14px;
+  color: #4B5C68;
+  line-height: 1.2;
+}
+
+.time {
+  font-size: 12px;
+  color: #4B5C68;
+  line-height: 1.2;
+}
+
+.stadium-cell {
+  text-align: center;
+  font-size: 14px;
+  color: #4B5C68;
+  min-width: 120px;
+}
+
+.home-team-cell,
+.away-team-cell {
+  min-width: 160px;
+}
+
+.home-team-cell {
+  text-align: right;
+}
+
+.away-team-cell {
+  text-align: left;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-team-cell .team-info {
+  justify-content: flex-end;
+}
+
+.away-team-cell .team-info {
+  justify-content: flex-start;
+}
+
+.team-flag,
+.team-flag-emoji {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid #E4EDF2;
+  background-color: #f8f9fa;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-flag-emoji {
+  font-size: 20px;
+}
+
+.team-name {
+  font-weight: 400;
+  color: #4B5C68;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.result-cell {
+  text-align: center;
+  min-width: 60px;
+  padding: 16px 8px;
+}
+
+.score-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #4B5C68;
+}
+
+.score-number {
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.score-separator {
+  font-weight: 400;
+  color: #4B5C68;
+  margin: 0 2px;
+}
+
+.no-result {
+  color: #4B5C68;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* TABLET - 501px to 750px */
+@media screen and (max-width: 750px) and (min-width: 501px) {
+  .container {
+    padding: 0 40px;
+    max-width: 750px;
+  }
+  
+  .matches-table th,
+  .matches-table td {
+    padding: 12px 8px;
+  }
+  
+  .team-flag,
+  .team-flag-emoji {
+    width: 28px;
+    height: 21px;
+    font-size: 18px;
+  }
+  
+  .home-team-cell,
+  .away-team-cell {
+    min-width: 110px;
+  }
+  
+  .date-cell {
+    min-width: 65px;
+  }
+  
+  .stadium-cell {
+    min-width: 90px;
+  }
+  
+  .team-name {
+    font-size: 13px;
+  }
+}
+
+/* MOBILE - 500px and below */
+@media screen and (max-width: 500px) {
+  .schedule-page {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 40px;
+    max-width: 500px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+  
+  .matches-table {
+    min-width: 420px;
+    font-size: 11px;
+  }
+  
+  .matches-table th {
+    font-size: 9px;
+    padding: 10px 4px;
+  }
+  
+  .matches-table td {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  
+  .date-cell {
+    min-width: 50px;
+  }
+  
+  .date,
+  .time {
+    font-size: 9px;
+    line-height: 1.1;
+  }
+  
+  .stadium-cell {
+    min-width: 60px;
+    font-size: 10px;
+  }
+  
+  .home-team-cell,
+  .away-team-cell {
+    min-width: 80px;
+  }
+  
+  .team-info {
+    gap: 3px;
+  }
+  
+  .team-flag,
+  .team-flag-emoji {
+    width: 18px;
+    height: 13px;
+    font-size: 12px;
+    border-radius: 2px;
+  }
+  
+  .team-name {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+  
+  .result-cell {
+    min-width: 35px;
+    padding: 8px 2px;
+  }
+  
+  .score-display {
+    font-size: 11px;
+    gap: 2px;
+  }
+  
+  .score-number {
+    font-size: 11px;
+    min-width: 12px;
+  }
+  
+  .score-separator {
+    font-size: 10px;
+  }
+  
+  .no-result {
+    font-size: 10px;
+  }
+}

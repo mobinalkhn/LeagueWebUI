@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soccer ball -->
+  <circle cx="12" cy="12" r="11" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1"/>
+  
+  <!-- Soccer ball patterns -->
+  <g fill="#025FEB">
+    <!-- Central pentagon -->
+    <polygon points="12,5 15,8 14,13 10,13 9,8"/>
+    
+    <!-- Lines -->
+    <path d="M12 5 L9 8 M15 8 L18 12 M14 13 L16 18 M10 13 L8 18 M9 8 L6 12 M6 12 L8 18 M18 12 L16 18" 
+          stroke="#025FEB" stroke-width="0.8" fill="none"/>
+  </g>
+</svg>

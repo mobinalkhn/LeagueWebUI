@@ -1,0 +1,39 @@
+.footer {
+  background-color: #F6F7F7;
+  margin-top: auto;
+  border-top: 1px solid #E4EDF2;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: right;
+}
+
+/* Responsive styles - maintain 40px padding */
+@media (max-width: 1000px) {
+  .footer-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    padding: 0 40px;
+  }
+}
+
+.footer-text {
+  color: #4B5C68; /* Exact spec: #4B5C68 for footer color */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
