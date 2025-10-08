@@ -1,0 +1,47 @@
+# GitHub Language Detection Configuration
+# ==================================================
+
+# Ignore node_modules from language detection
+node_modules/** linguist-vendored
+
+# Ignore build output files
+.next/** linguist-generated
+out/** linguist-generated
+dist/** linguist-generated
+build/** linguist-generated
+
+# Ignore package manager files
+package-lock.json linguist-generated
+yarn.lock linguist-generated
+pnpm-lock.yaml linguist-generated
+
+# Ignore map files
+*.map linguist-generated
+
+# Ignore minified files
+*.min.js linguist-generated
+*.min.css linguist-generated
+
+# Mark TypeScript and TSX as main languages
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Mark CSS as styling
+*.css linguist-language=CSS
+
+# Ignore documentation from language stats
+*.md linguist-documentation
+
+# Ignore configuration files
+*.json linguist-data
+*.yml linguist-data
+*.yaml linguist-data
+.eslintrc* linguist-data
+.prettierrc* linguist-data
+next.config.* linguist-data
+tailwind.config.* linguist-data
+postcss.config.* linguist-data
+
+# Mark vendor/third-party code
+public/vendor/** linguist-vendored
+src/vendor/** linguist-vendored
