@@ -1,3 +1,9 @@
+<div align="center">
+
+![League Web UI Banner](./assets/banner.svg)
+
+</div>
+
 # 🏆 League Web UI
 
 A modern, responsive Sports League Web application featuring multiple implementations (React & Next.js) with Node.js backend, showcasing schedule display, leaderboard, and comprehensive API integration.

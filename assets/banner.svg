@@ -1,0 +1,74 @@
+<svg width="1200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#025FEB;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#182C62;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4B5C68;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#gradient)"/>
+  
+  <!-- Football/Soccer Pattern -->
+  <circle cx="100" cy="80" r="25" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+  <circle cx="1100" cy="220" r="30" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.2"/>
+  <polygon points="50,250 70,220 90,250 70,280" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.2"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#FFFFFF" filter="url(#shadow)">
+    🏆 League Web UI
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#E4EDF2">
+    Modern Sports League Management • Next.js + React + TypeScript
+  </text>
+  
+  <!-- Tech Stack -->
+  <g transform="translate(300, 200)">
+    <!-- Next.js Badge -->
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="#000000"/>
+    <text x="50" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFFFFF">Next.js 15.5</text>
+    
+    <!-- React Badge -->
+    <rect x="110" y="0" width="90" height="30" rx="15" fill="#61DAFB"/>
+    <text x="155" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#000000">React 19.1</text>
+    
+    <!-- TypeScript Badge -->
+    <rect x="210" y="0" width="110" height="30" rx="15" fill="#007ACC"/>
+    <text x="265" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFFFFF">TypeScript</text>
+    
+    <!-- Express Badge -->
+    <rect x="330" y="0" width="100" height="30" rx="15" fill="#43853D"/>
+    <text x="380" y="20" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#FFFFFF">Express API</text>
+  </g>
+  
+  <!-- Features Icons -->
+  <g transform="translate(150, 240)">
+    <circle cx="0" cy="0" r="15" fill="#025FEB"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#FFFFFF">📱</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">Responsive</text>
+  </g>
+  
+  <g transform="translate(250, 240)">
+    <circle cx="0" cy="0" r="15" fill="#025FEB"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#FFFFFF">🔐</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">Secure API</text>
+  </g>
+  
+  <g transform="translate(850, 240)">
+    <circle cx="0" cy="0" r="15" fill="#025FEB"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#FFFFFF">⚡</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">Fast SSR</text>
+  </g>
+  
+  <g transform="translate(950, 240)">
+    <circle cx="0" cy="0" r="15" fill="#025FEB"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#FFFFFF">🎯</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">Type Safe</text>
+  </g>
+</svg>
