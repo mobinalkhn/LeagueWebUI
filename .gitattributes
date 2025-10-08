@@ -1,0 +1,76 @@
+# GitHub Language Detection Configuration - Root Level
+# =====================================================
+
+# Ignore large HTML documentation files
+*.html linguist-documentation
+
+# Ignore instruction and documentation files
+Candidate* linguist-documentation
+*Instructions* linguist-documentation
+
+# Ignore node_modules in all directories
+**/node_modules/** linguist-vendored
+
+# Ignore build and generated files
+**/.next/** linguist-generated
+**/out/** linguist-generated
+**/dist/** linguist-generated
+**/build/** linguist-generated
+**/*.map linguist-generated
+
+# Package manager files
+**/package-lock.json linguist-generated
+**/yarn.lock linguist-generated
+**/pnpm-lock.yaml linguist-generated
+
+# Mark main programming languages
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Mark styling languages
+*.css linguist-language=CSS
+*.scss linguist-language=SCSS
+*.sass linguist-language=Sass
+
+# Configuration files as data
+*.json linguist-data
+*.yml linguist-data
+*.yaml linguist-data
+*.toml linguist-data
+.eslintrc* linguist-data
+.prettierrc* linguist-data
+next.config.* linguist-data
+tailwind.config.* linguist-data
+postcss.config.* linguist-data
+tsconfig.json linguist-data
+
+# Documentation files
+*.md linguist-documentation
+README.* linguist-documentation
+CHANGELOG.* linguist-documentation
+LICENSE* linguist-documentation
+
+# Asset and media files
+*.svg linguist-data
+*.png linguist-data
+*.jpg linguist-data
+*.jpeg linguist-data
+*.gif linguist-data
+*.ico linguist-data
+*.woff linguist-data
+*.woff2 linguist-data
+*.ttf linguist-data
+*.eot linguist-data
+
+# Test files
+**/*test* linguist-data
+**/*spec* linguist-data
+**/tests/** linguist-data
+**/test/** linguist-data
+
+# Vendor and third-party code
+**/vendor/** linguist-vendored
+**/public/vendor/** linguist-vendored
+**/src/vendor/** linguist-vendored
