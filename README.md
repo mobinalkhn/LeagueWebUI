@@ -1,54 +1,97 @@
-# League Web UI
+# 🏆 League Web UI
 
-A responsive Sports League Web application built with React and Node.js, featuring schedule display, leaderboard, and API integration.
+A modern, responsive Sports League Web application featuring multiple implementations (React & Next.js) with Node.js backend, showcasing schedule display, leaderboard, and comprehensive API integration.
 
-## 🏆 Features
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
-- **Schedule Page**: View all matches with dates, teams, and scores
-- **Leaderboard**: Team standings with statistics (MP, GF, GA, GD, Points)
-- **404 Page**: Custom error page with responsive design
-- **Responsive Design**: Optimized for Desktop (1000px), Tablet (750px), and Mobile (500px)
-- **API Integration**: RESTful backend with JWT authentication
-- **Flag Support**: Country flags for all teams
-- **Real-time Data**: Live data from API with fallback to mock data
+## ✨ Features
+
+- **📅 Schedule Page**: View all matches with dates, teams, and scores
+- **🏅 Leaderboard**: Team standings with comprehensive statistics (MP, GF, GA, GD, Points)
+- **❌ 404 Page**: Custom error page with responsive design
+- **📱 Responsive Design**: Pixel-perfect optimization for Desktop (1000px), Tablet (750px), and Mobile (500px)
+- **🔐 API Integration**: RESTful backend with JWT authentication
+- **🏳️ Flag Support**: CSS-based country flags for all teams
+- **⚡ Real-time Data**: Live data from API with intelligent fallback system
+- **🎯 Pixel Perfect**: Exact design implementation matching specifications
+- **🚀 Modern Architecture**: Both React SPA and Next.js SSR implementations
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React** (v19.2.0) with TypeScript
-- **React Router** for navigation
-- **CSS3** with responsive design
-- **Open Sans** font family
+### 🎨 Frontend Implementations
 
-### Backend
-- **Node.js** with Express.js
-- **JWT** authentication
-- **CORS** enabled
-- **UUID** for token generation
+#### **Next.js Application (Primary)**
+- **Next.js**: v15.5.4 (App Router)
+- **React**: v19.1.0
+- **TypeScript**: v5.7.3
+- **Server-Side Rendering**: Enhanced performance and SEO
+- **Custom CSS Components**: Flag library and responsive layouts
 
-## 🚀 Installation & Setup
+#### **React Application (Alternative)**
+- **React**: v19.2.0 with TypeScript
+- **React Router**: Client-side navigation
+- **CSS3**: Responsive design with breakpoints
+- **Component Architecture**: Modular and reusable design
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- npm or yarn
+### ⚙️ Backend
+- **Express.js**: v4.18.2 - Fast, minimalist web framework
+- **JWT**: v9.0.2 - Secure authentication tokens
+- **CORS**: v2.8.5 - Cross-origin resource sharing
+- **UUID**: v9.0.1 - Unique identifier generation
 
-### Frontend Setup
+## 🚀 Quick Start Guide
+
+### 📋 Prerequisites
+- **Node.js**: v18.18.0 or higher
+- **npm**: v9.0.0 or higher (comes with Node.js)
+- **Git**: For cloning the repository
+
+### ⚡ Next.js Application (Recommended)
 ```bash
+# Clone the repository
+git clone https://github.com/mobinalkhn/LeagueWebUI.git
+cd LeagueWebUI
+
+# Install and run Next.js frontend
+cd league-nextjs
+npm install
+npm run dev
+```
+🌐 **Next.js App**: `http://localhost:3000`
+
+### 🎯 React Application (Alternative)
+```bash
+# Install and run React frontend
 cd league-web-ui
 npm install
 npm start
 ```
-The frontend will run on `http://localhost:3000`
+🌐 **React App**: `http://localhost:3000`
 
-### Backend Setup
+### 🔧 Backend API Server
 ```bash
+# Install and run API server
 cd api-server  
 npm install
 npm start
-# or
-node server.js
 ```
-The API server will run on `http://localhost:3001`
+🌐 **API Server**: `http://localhost:3001`
+
+### 🚀 Full Stack Setup
+```bash
+# Terminal 1: Start API Server
+cd api-server && npm start
+
+# Terminal 2: Start Frontend (Next.js)
+cd league-nextjs && npm run dev
+
+# Or React Alternative
+cd league-web-ui && npm start
+```
 
 ## 📱 Responsive Breakpoints
 
@@ -84,55 +127,123 @@ The API server will run on `http://localhost:3001`
 - Table Content: 14px
 - Bold Text: 16px
 
-## 📂 Project Structure
+## 📂 Project Architecture
 
 ```
 LeagueWebUI/
-├── league-web-ui/          # React Frontend
-│   ├── public/
-│   │   └── assets/         # Logo and images
+├── 🚀 league-nextjs/              # Next.js Application (Primary)
+│   ├── src/app/                   # App Router Structure
+│   │   ├── layout.tsx             # Root layout with navigation
+│   │   ├── page.tsx               # Schedule page (/)
+│   │   ├── leaderboard/page.tsx   # Leaderboard page (/leaderboard)
+│   │   ├── not-found.tsx          # 404 error page
+│   │   └── globals.css            # Global styles
+│   ├── src/components/            # Reusable components
+│   │   └── CountryFlag.tsx        # CSS flag components
+│   ├── src/services/              # API integration
+│   │   └── leagueApi.ts           # HTTP client with fallbacks
+│   ├── public/assets/             # Static assets
+│   ├── .gitattributes            # GitHub language detection
+│   └── package.json               # Dependencies & scripts
+│
+├── ⚛️ league-web-ui/              # React SPA (Alternative)
+│   ├── public/assets/             # Static assets
 │   ├── src/
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── services/       # API services
-│   │   └── data/           # Mock data
+│   │   ├── components/            # Header, Footer components
+│   │   ├── pages/                 # Page components
+│   │   ├── services/              # API services
+│   │   └── data/                  # Mock data fallback
 │   └── package.json
-├── api-server/             # Node.js Backend
-│   ├── server.js           # Main server file
-│   └── package.json
-└── README.md
+│
+├── 🔧 api-server/                 # Express.js Backend
+│   ├── server.js                  # Main server with all endpoints
+│   ├── package.json               # Backend dependencies
+│   └── README.md                  # API documentation
+│
+├── 📋 .gitignore                  # Git ignore patterns
+└── 📖 README.md                   # This documentation
 ```
 
-## 🏃‍♂️ Running the Application
+## 🏃‍♂️ Production Deployment
 
-1. **Start the API Server:**
-   ```bash
-   cd api-server
-   node server.js
-   ```
+### 🌐 Next.js Production Build
+```bash
+cd league-nextjs
+npm run build
+npm start
+```
 
-2. **Start the Frontend:**
-   ```bash
-   cd league-web-ui
-   npm start
-   ```
+### ⚛️ React Production Build
+```bash
+cd league-web-ui
+npm run build
+# Serve with any static server
+npx serve -s build
+```
 
-3. **Access the Application:**
-   - Frontend: `http://localhost:3000`
-   - API: `http://localhost:3001`
+### 🔧 API Server Production
+```bash
+cd api-server
+# Set environment variables
+export NODE_ENV=production
+export PORT=3001
+npm start
+```
 
-## 🧪 Testing
+## 🌟 Key Highlights
 
-The application includes:
-- Responsive design testing
-- API integration testing
-- Error handling and fallbacks
-- Cross-browser compatibility
+- **🎯 Pixel Perfect**: Exact implementation of design specifications
+- **📱 Responsive Excellence**: Tested across multiple breakpoints
+- **🚀 Modern Stack**: Latest versions of React 19.1.0 & Next.js 15.5.4
+- **🔐 Secure API**: JWT-based authentication with proper error handling
+- **♿ Accessibility**: Semantic HTML and proper ARIA attributes
+- **🎨 Custom Components**: Pure CSS flag library without external dependencies
+- **📊 Performance**: Optimized loading and rendering strategies
+
+## 🧪 Quality Assurance
+
+✅ **Comprehensive Testing Coverage**
+- Responsive design validation (Desktop/Tablet/Mobile)
+- API integration with fallback mechanisms
+- Error boundary implementation
+- Cross-browser compatibility (Chrome, Firefox, Safari, Edge)
+- Performance optimization and lighthouse scoring
+
+✅ **Code Quality Standards**
+- TypeScript strict mode enabled
+- ESLint configuration with best practices
+- Proper component architecture and separation of concerns
+- Clean, maintainable, and well-documented code
+
+## 🔗 Live Demo & Repository
+
+- **🌐 Live Demo**: [Deploy to your preferred platform]
+- **📱 Responsive Preview**: Test on different devices
+- **🔧 API Endpoints**: Full RESTful API documentation available
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is created for demonstration purposes.
+This project is developed for demonstration and educational purposes.
 
 ---
 
-**Developed with ❤️ using React & Node.js**
+<div align="center">
+
+**🏆 Developed with passion using Next.js, React & Node.js**
+
+*Sports League Web Application - Modern, Responsive, Performance-Optimized*
+
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-blue)](https://www.typescriptlang.org/)
+[![Express](https://img.shields.io/badge/Express-4.18.2-green)](https://expressjs.com/)
+
+</div>

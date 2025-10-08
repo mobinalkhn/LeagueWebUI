@@ -1,13 +1,19 @@
-# League Web UI
+# 🏆 League Web UI - Next.js Implementation
 
-A sports league management web application built with Next.js and TypeScript.
+A modern, server-side rendered Sports League Web application built with **Next.js 15.5.4** and **React 19.1.0**.
 
-## Features
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?style=flat-square&logo=nextdotjs)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue?style=flat-square&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 
-- **Schedule Management**: View upcoming and completed matches
-- **Leaderboard**: Track team standings and statistics  
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Real-time Data**: Connects to backend API for live updates
+## ✨ Next.js Specific Features
+
+- **🚀 App Router**: Latest Next.js architecture with `app/` directory
+- **🔄 Server-Side Rendering**: Enhanced performance and SEO optimization
+- **📱 Responsive Design**: Perfect pixel implementation across all devices
+- **⚡ Optimized Performance**: Built-in optimization for production deployments
+- **🎯 TypeScript**: Full type safety with strict mode enabled
+- **🎨 Custom CSS Components**: Pure CSS flag library without dependencies
 
 This is a [Next.js](https://nextjs.org) project.
 
