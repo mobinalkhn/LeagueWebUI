@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        pre { background: #f8f9fa; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>League API Test</h1>
+    
+    <button onclick="testApiVersion()">Test /api/version</button>
+    <button onclick="testGetToken()">Test /api/v1/getAccessToken</button>
+    <button onclick="testGetMatches()">Test /api/v1/getAllMatches</button>
+    <button onclick="testAll()">Test All Endpoints</button>
+    
+    <div id="results"></div>
+
+    <script>
+        let currentToken = null;
+        
+        function addResult(title, success, message, data = null) {
+            const results = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = `test-result ${success ? 'success' : 'error'}`;
+            div.innerHTML = `
+                <h3>${title}</h3>
+                <p>${message}</p>
+                ${data ? `<pre>${JSON.stringify(data, null, 2)}</pre>` : ''}
+            `;
+            results.appendChild(div);
+        }
+        
+        async function testApiVersion() {
+            try {
+                const response = await fetch('http://localhost:3001/api/version');
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    addResult('✅ API Version', true, 'Successfully retrieved API version', data);
+                } else {
+                    addResult('❌ API Version', false, 'Failed to get API version', data);
+                }
+            } catch (error) {
+                addResult('❌ API Version', false, `Error: ${error.message}`);
+            }
+        }
+        
+        async function testGetToken() {
+            try {
+                const response = await fetch('http://localhost:3001/api/v1/getAccessToken');
+                const data = await response.json();
+                
+                if (response.ok && data.success && data.access_token) {
+                    currentToken = data.access_token;
+                    addResult('✅ Get Access Token', true, 'Successfully retrieved access token', data);
+                } else {
+                    addResult('❌ Get Access Token', false, 'Failed to get access token', data);
+                }
+            } catch (error) {
+                addResult('❌ Get Access Token', false, `Error: ${error.message}`);
+            }
+        }
+        
+        async function testGetMatches() {
+            if (!currentToken) {
+                addResult('❌ Get Matches', false, 'No token available. Please get token first.');
+                return;
+            }
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/v1/getAllMatches', {
+                    headers: {
+                        'Authorization': `Bearer ${currentToken}`
+                    }
+                });
+                const data = await response.json();
+                
+                if (response.ok && data.success && data.matches) {
+                    addResult('✅ Get All Matches', true, `Successfully retrieved ${data.matches.length} matches`, data);
+                } else {
+                    addResult('❌ Get All Matches', false, 'Failed to get matches', data);
+                }
+            } catch (error) {
+                addResult('❌ Get All Matches', false, `Error: ${error.message}`);
+            }
+        }
+        
+        async function testAll() {
+            document.getElementById('results').innerHTML = '';
+            await testApiVersion();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await testGetToken();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await testGetMatches();
+        }
+    </script>
+</body>
+</html>
